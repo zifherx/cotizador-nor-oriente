@@ -13,8 +13,10 @@ $(function() {
         $('#precio').val('');
         $('#precioBruto').val('');
         $('#precioVenta').val('');
+        $('#descuento').val('');
         $('#tentativa-campania').hide();
         $('#precio-final').hide();
+
     })
 
     $('#btnBuscar').on('click', function(e) {
@@ -47,6 +49,18 @@ $(function() {
             }
         })
     })
+
+    $('#descuento').on('keypress', function() {
+        var descuento = $('#descuento').val();
+        var precioBruto = $('#precioBruto').val()
+        var incentivo = $('#campania1').val();
+        if (descuento.empty) {
+            $('#descuento').val('0');
+            $('#precioVenta').val(precioBruto - descuento - incentivo);
+        } else {
+            $('#precioVenta').val(precioBruto - descuento - incentivo);
+        }
+    });
 
 
 });

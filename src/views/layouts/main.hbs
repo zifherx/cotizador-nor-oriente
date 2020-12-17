@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {{>header}}
+</head>
+
+<body>
+    {{>navigation}}
+
+    {{>message}}
+
+
+    {{{body}}}
+
+    <span class="ir-arriba"><i class="fas fa-angle-up"></i></span>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white">
+        <div class="container p-2">
+            <div class="row">
+                <div class="mx-auto text-center">
+                    <p>Cotizador &copy; Copyright {{getCurrentYear}}, </p>
+                    <p>Autonort Nor Oriente | Todos los derechos reservados</p>
+                    <p>
+                        <i class="fab fa-twitter-square fa-2x"></i>
+                        <i class="fab fa-facebook-square fa-2x"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {{>footer}}
+
+</body>
+
+</html>
